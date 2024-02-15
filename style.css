@@ -1,0 +1,176 @@
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#page1 {
+    min-height: 100vh;
+    /*  why we don't give here height in % like 100% see if we use percent  because it use we give height to our parent and here our parent is main so we don't give height to it so we give to page1 in % . */
+    width: 100%;
+    position: relative;
+    padding-top: 30vh;
+
+}
+#nav{
+    /* height: 100px; */
+    width: 100%;
+    /* background-color: pink; */
+    position: fixed;
+    z-index: 99;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+#nav #list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+#nav #list #links a{
+    padding: 40px;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+text-decoration: none;
+color: black;
+}
+
+#nav #list #icons i{
+    padding: 20px;
+}
+
+#page1 h1 {
+    font-size: 15.3vw;
+    text-transform: uppercase;
+    font-family: futura;
+    line-height: 13vw;
+    letter-spacing: -7px;
+    text-align: center;
+    font-weight: bolder;
+    
+}
+ h1::selection{
+    background-color: black;
+    color: #fff;
+}
+#video-container{
+    height: 100%;
+    width: 100%;
+    margin-top: 1vw;
+    position: relative;
+}
+
+#video-container video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    /* overflow-x: hidden; */
+}
+#video-container #play{
+  padding:3vw 2vw;
+  position: fixed;
+  font-size: 1.3vw;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+text-transform: uppercase;
+font-family: "futura";
+opacity: 0;
+scale: 0;
+
+}
+
+/* page code */
+#page2{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3vw 1vw;
+    
+}
+#page2 .elem{
+    height: 100%;
+    width: 31%;
+    /* background-color: yellow; */
+overflow: hidden;
+position: relative;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+#page2 .elem .dets{
+    height: 50px;
+    width: 80%;
+    background-color: rgb(227, 227, 194);
+    position: absolute;
+   z-index: 9;
+    border-radius: 50px;
+    transition: transform 0.3s ease;
+    transform-origin: top;
+
+   
+}
+#page2 .elem .dets :hover{
+    transform: scaleY(2);
+
+    
+}
+
+#page2 .elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    scale: 1.1;
+}
+
+#page3{
+   min-height: 120vh;
+    width: 100vw;
+    background-color: #f7f7f7;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.child{
+    height: 50vh;
+    width: 35vw;
+    margin: 3vw 5vw;
+    /* background-color: rebeccapurple; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.child img{
+    height: 100%;
+    width: 100%;
+}
+#cursor{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: rgb(30, 107, 107);
+    position: fixed;
+    transform: translate(-50%,-50%)scale(0);
+}
